@@ -40,7 +40,7 @@ const FileSearch = ({title, onFileSearch}) => {
         <div className="alert alert-primary">
             {
                 !inputActive &&
-                <div className="d-flex justify-content-between align-items-center">
+                <div className="d-flex justify-content-between align-items-center mb-0">
                     <span>{title}</span>
                     <button
                         className="icon-btn"
