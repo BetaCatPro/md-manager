@@ -5,7 +5,8 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import PropTypes from 'prop-types'
 
 import classNames from 'classnames'
-import '../assets/TabList.scss'
+// import '../assets/TabList.scss'
+import '../assets/tab-list.css'
 
 const TabList = ({ files, activeId, unsaveIds, onTabClick, onCloseTab}) => {
     return (
