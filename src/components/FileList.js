@@ -50,7 +50,7 @@ const FileList = ({ files, onFileClick, onSaveEdit, onFileDelete }) => {
             {
                 files.map(file => (
                     <li
-                        className="row list-group-item bg-light d-flex align-items-center file-item"
+                        className="row mx-0 list-group-item bg-light d-flex align-items-center file-item"
                         key={file.id}
                     >
                         {(file.id !== editStatus) &&
@@ -62,12 +62,12 @@ const FileList = ({ files, onFileClick, onSaveEdit, onFileDelete }) => {
                                 />
                             </span>
                             <span
-                                className="col-8 c-link"
+                                className="col-6 c-link"
                                 onClick={()=>{onFileClick(file.id)}}
                             >{file.title}</span>
 
                             <button
-                                className="icon-btn col-1"
+                                className="icon-btn col-2"
                                 type="button"
                                 onClick={()=>{setEditStatus(file.id);setValue(file.title)}}
                             >
@@ -78,7 +78,7 @@ const FileList = ({ files, onFileClick, onSaveEdit, onFileDelete }) => {
                                 />
                             </button>
                             <button
-                                className="icon-btn col-1"
+                                className="icon-btn col-2"
                                 type="button"
                                 onClick={()=>{onFileDelete(file.id)}}
                             >

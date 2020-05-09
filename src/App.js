@@ -2,10 +2,13 @@ import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { faPlus, faFileImport } from '@fortawesome/free-solid-svg-icons'
+import SimpleMDE from 'react-simplemde-editor'
+import 'easymde/dist/easymde.min.css'
 
 import FileSearch from './components/FileSearch'
 import FileList from './components/FileList'
 import BottomBtn from './components/BottomBtn'
+import TabList from './components/TabList'
 
 import defaultFiles from './utils/defaultFiles'
 
@@ -41,8 +44,22 @@ function App() {
                         </div>
                     </div>
                 </div>
-                <div className="col-8 bg-primary right-pannel">
-                    <p>container</p>
+                <div className="col-8 right-pannel">
+                    <TabList
+                        files={defaultFiles}
+                        activeId="1"
+                        unsaveIds={['1','2']}
+                        onTabClick={(id)=>{console.log(id)}}
+                        onCloseTab={(id)=>{console.log(id)}}
+                    />
+                    <SimpleMDE
+                        value={defaultFiles[1].body}
+                        onChange={(value)=>{console.log(value)}}
+                        options={{
+                            minHeight: '515px'
+                        }}
+
+                    />
                 </div>
             </div>
         </div>
