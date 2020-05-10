@@ -135,7 +135,6 @@ const FileList = ({ files, onFileClick, onSaveEdit, onFileDelete }) => {
                 ))
             }
         </ul>
-        </ul>
     )
 }
 
